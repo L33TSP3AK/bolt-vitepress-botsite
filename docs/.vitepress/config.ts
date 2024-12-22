@@ -78,15 +78,6 @@ export default defineConfig({
           }
         ]
       },
-      {
-        text: '🎭 Configs',
-        collapsed: true,
-        items: [
-          { text: 'Grid System', link: '/layouts/grid' },
-          { text: 'Flexbox', link: '/layouts/flexbox' },
-          { text: 'Responsive Design', link: '/layouts/responsive' }
-        ]
-      }
     ],
   },
   footer: {
