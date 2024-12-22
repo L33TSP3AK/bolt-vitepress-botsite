@@ -9,7 +9,106 @@
   </div>
 </div>
 
-## Training Modules
+## <center>Available Features</center>
+
+<div class="features-grid">
+  <div class="feature-item" data-tooltip="Validate and check card information">
+    <span class="feature-icon">💳</span>
+    <span class="feature-text">Card Check</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Suggest new automation requests">
+    <span class="feature-icon">💭</span>
+    <span class="feature-text">Suggest Requests</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Process and analyze ULP requests">
+    <span class="feature-icon">🔍</span>
+    <span class="feature-text">Request ULP</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Verify bank account information">
+    <span class="feature-icon">🏦</span>
+    <span class="feature-text">Bank Check</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Target email addresses for requests">
+    <span class="feature-icon">📧</span>
+    <span class="feature-text">Request Email Targets</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Search through inbox requests">
+    <span class="feature-icon">📬</span>
+    <span class="feature-text">Search Inbox Requests</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Validate BIN numbers">
+    <span class="feature-icon">🔢</span>
+    <span class="feature-text">BIN Checking</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Target cookies for requests">
+    <span class="feature-icon">🍪</span>
+    <span class="feature-text">Request Cookie Targets</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Search by specific request">
+    <span class="feature-icon">🔎</span>
+    <span class="feature-text">Search By Request</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Check account balances via IVR">
+    <span class="feature-icon">💰</span>
+    <span class="feature-text">IVR Balance Checker</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Request new configurations">
+    <span class="feature-icon">📝</span>
+    <span class="feature-text">Request Config</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Search by country location">
+    <span class="feature-icon">🌐</span>
+    <span class="feature-text">Search By Country</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Access bullet configurations">
+    <span class="feature-icon">⚙️</span>
+    <span class="feature-text">Bullet Configs</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Manage cookie configurations">
+    <span class="feature-icon">🍪</span>
+    <span class="feature-text">Cookie Configs</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Search by category">
+    <span class="feature-icon">📁</span>
+    <span class="feature-text">Search By Category</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Browse available configurations">
+    <span class="feature-icon">🛠️</span>
+    <span class="feature-text">View Available Configs</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Access cookies">
+    <span class="feature-icon">🍪</span>
+    <span class="feature-text">Cookies</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Verify Telegram tokens">
+    <span class="feature-icon">🤖</span>
+    <span class="feature-text">Telegram Token Checking</span>
+  </div>
+  
+  <div class="feature-item" data-tooltip="Access BAS configurations">
+    <span class="feature-icon">🔧</span>
+    <span class="feature-text">BAS Configs</span>
+  </div>
+</div>
+
+## <center>You can get access to:</center>
 
 <div class="module-grid">
   <div class="module-card" data-category="stealer">
@@ -17,9 +116,9 @@
     <div class="module-icon">🎭</div>
     <h3>Stealer Operations</h3>
     <ul>
-      <li>Log Analysis</li>
-      <li>Data Extraction</li>
-      <li>Cookie Management</li>
+      <li>100's Various Resources for Logs</li>
+      <li>Checkers, Sorters & Managers</li>
+      <li>Stealers, Clippers and more</li>
     </ul>
     <div class="progress-bar">
       <div class="progress" style="width: 75%"></div>
@@ -29,11 +128,12 @@
   <div class="module-card" data-category="carding">
     <div class="card-glow"></div>
     <div class="module-icon">💳</div>
-    <h3>Carding Techniques</h3>
+    <h3>Carding Resources</h3>
     <ul>
       <li>Card Validation</li>
       <li>Bank Verification</li>
-      <li>Balance Checking</li>
+      <li>IVR Balance Check</li>
+      <li>Private Self Published Guides</li>
     </ul>
     <div class="progress-bar">
       <div class="progress" style="width: 60%"></div>
@@ -43,11 +143,11 @@
   <div class="module-card" data-category="config">
     <div class="card-glow"></div>
     <div class="module-icon">⚙️</div>
-    <h3>Config Development</h3>
+    <h3>Config Insight</h3>
     <ul>
-      <li>Pattern Creation</li>
-      <li>Script Writing</li>
-      <li>Error Handling</li>
+      <li>Learn various config styles</li>
+      <li>Access to 100's of "Blueprints"</li>
+      <li>Live Screen Share Dev</li>
     </ul>
     <div class="progress-bar">
       <div class="progress" style="width: 45%"></div>
@@ -57,17 +157,26 @@
   <div class="module-card" data-category="security">
     <div class="card-glow"></div>
     <div class="module-icon">🔒</div>
-    <h3>Security Protocols</h3>
+    <h3>Locked Resources</h3>
     <ul>
-      <li>OPSEC Basics</li>
-      <li>Proxy Management</li>
-      <li>Anti-Detection</li>
+      <li>Access to Membership Areas</li>
+      <li>Invites to Originizations</li>
+      <li>Membership Code Sharing</li>
     </ul>
     <div class="progress-bar">
       <div class="progress" style="width: 90%"></div>
     </div>
   </div>
 </div>
+
+::: warning Operational Security
+Always maintain strict operational security protocols when using provided tools and resources
+:::
+
+::: danger Legal Notice
+Users are responsible for ensuring compliance with applicable laws and regulations
+:::
+
 
 <style>
 .hero-container {
@@ -225,6 +334,93 @@
   background: linear-gradient(90deg, #00ff00, #00e5ff);
   animation: progressPulse 2s infinite;
 }
+
+:deep(.feature-box) {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  transition: all 0.3s ease;
+}
+
+:deep(.feature-box:hover) {
+  transform: translateY(-4px);
+  border-color: var(--vp-c-brand);
+  box-shadow: 0 8px 16px rgba(0, 229, 255, 0.1);
+}
+
+:deep(.feature-title) {
+  background: linear-gradient(120deg, var(--vp-c-brand), var(--vp-c-brand-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: 1rem;
+  border: 1px solid var(--vp-c-brand);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--vp-c-bg-alt);
+  border-radius: 0.5rem;
+  border: 1px solid var(--vp-c-border);
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: help;
+}
+
+.feature-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--vp-c-brand);
+  box-shadow: 0 4px 8px rgba(0, 229, 255, 0.1);
+}
+
+.feature-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-0.5rem);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  border: 1px solid var(--vp-c-brand);
+  z-index: 10;
+}
+
+.feature-item:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-0.25rem);
+}
+
+.feature-icon {
+  font-size: 1.25rem;
+}
+
+.feature-text {
+  color: var(--vp-c-text-1);
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
 
 @keyframes progressPulse {
   0% { opacity: 1; }

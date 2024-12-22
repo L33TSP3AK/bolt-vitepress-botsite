@@ -138,13 +138,23 @@
   font-family: monospace;
 }
 
+
 .terminal-window {
-  position: relative;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 1rem;
-  font-family: monospace;
+  background: #000;
   color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.line {
+  margin-bottom: 0.5rem;
+}
+
+.success {
+  color: #00ff00; /* Bright green for success messages */
 }
 
 .line {
@@ -218,3 +228,57 @@
   font-family: monospace;
 }
 </style>
+
+<script>
+  // Lines to display in the terminal
+  const terminalLines = [
+    "Initializing configuration collection...",
+    "Found 312 Bullet Configs...",
+    "Found 267 BAS Configs...",
+    "Found 281 BL Tools Configs...",
+    "<span class='success'>System ready.</span>"
+  ];
+
+  const terminalWindow = document.querySelector('.terminal-window');
+  let currentLineIndex = 0;
+
+  // Function to type out a single line with a typing effect
+  function typeLine(line, callback) {
+    let charIndex = 0;
+    const lineElement = document.createElement('div'); // Create a new line element
+    lineElement.classList.add('line');
+    terminalWindow.appendChild(lineElement);
+
+    function typeCharacter() {
+      if (charIndex < line.length) {
+        lineElement.innerHTML += line[charIndex]; // Add next character
+        charIndex++;
+
+        // Random typing speed between 50ms and 150ms per character
+        const typingSpeed = Math.random() * (150 - 50) + 50;
+
+        // Introduce random lag (longer delay) occasionally
+        const isLagging = Math.random() < 0.1; // 10% chance of lag
+        const delay = isLagging ? Math.random() * (1000 - 500) + 500 : typingSpeed;
+
+        setTimeout(typeCharacter, delay);
+      } else {
+        callback(); // Move to the next line when finished
+      }
+    }
+
+    typeCharacter();
+  }
+
+  // Function to type all lines sequentially
+  function typeAllLines() {
+    if (currentLineIndex < terminalLines.length) {
+      const line = terminalLines[currentLineIndex];
+      currentLineIndex++;
+      typeLine(line, typeAllLines); // Type the next line after finishing the current one
+    }
+  }
+
+  // Start typing animation
+  typeAllLines();
+</script>

@@ -1,5 +1,3 @@
-# Advanced Operations
-
 <div class="neural-container">
   <canvas id="neuralCanvas"></canvas>
   <div class="overlay-content">
@@ -20,9 +18,6 @@
     </div>
   </div>
 </div>
-
-## Operation Modules
-
 <div class="ops-grid">
   <div class="ops-card" data-priority="high">
     <div class="card-header">
@@ -31,14 +26,14 @@
     </div>
     <div class="card-content">
       <ul>
-        <li>System Infiltration</li>
-        <li>Data Extraction</li>
-        <li>Trace Removal</li>
+        <li>Python Dev</li>
+        <li>Java Dev</li>
+        <li>Web Designers</li>
       </ul>
     </div>
     <div class="card-footer">
       <div class="status">ACTIVE</div>
-      <div class="timestamp">00:00:00</div>
+      <div class="timestamp glow" id="highPriorityTimestamp">00:00:00</div>
     </div>
   </div>
 
@@ -56,7 +51,7 @@
     </div>
     <div class="card-footer">
       <div class="status">STANDBY</div>
-      <div class="timestamp">00:00:00</div>
+      <div class="timestamp glow" id="mediumPriorityTimestamp">00:00:00</div>
     </div>
   </div>
 
@@ -74,10 +69,11 @@
     </div>
     <div class="card-footer">
       <div class="status">READY</div>
-      <div class="timestamp">00:00:00</div>
+      <div class="timestamp glow" id="lowPriorityTimestamp">00:00:00</div>
     </div>
   </div>
 </div>
+
 
 <script setup>
 import { onMounted } from 'vue'
@@ -158,7 +154,34 @@ onMounted(() => {
   
   animate()
 })
+
+function startFastTimer(elementId, speed) {
+  let seconds = 0;
+
+  // Convert seconds into HH:MM:SS format
+  function formatTime(sec) {
+    const hours = String(Math.floor(sec / 3600)).padStart(2, '0');
+    const minutes = String(Math.floor((sec % 3600) / 60)).padStart(2, '0');
+    const remainingSeconds = String(sec % 60).padStart(2, '0');
+    return `${hours}:${minutes}:${remainingSeconds}`;
+  }
+
+  // Update the timestamp at the specified speed interval
+  setInterval(() => {
+    seconds += 1; // Increment by one second
+    document.getElementById(elementId).textContent = formatTime(seconds);
+  }, speed); // Speed determines how fast the timestamp updates
+}
+
+// Start the timers for each card
+startFastTimer('highPriorityTimestamp', 100);
+startFastTimer('mediumPriorityTimestamp', 500);
+startFastTimer('lowPriorityTimestamp', 1000);
+
 </script>
+
+
+
 
 <style>
 .neural-container {
@@ -231,6 +254,8 @@ onMounted(() => {
   overflow: hidden;
 }
 
+
+
 .ops-card[data-priority="high"] { border-color: #ff0000; }
 .ops-card[data-priority="medium"] { border-color: #ffff00; }
 .ops-card[data-priority="low"] { border-color: #00ff00; }
@@ -281,7 +306,36 @@ onMounted(() => {
 
 .timestamp {
   font-family: monospace;
-  color: #666;
+}
+
+/* Glowing effects for timestamps based on priority */
+.timestamp.glow {
+  animation: pulseGlowEffect 1.5s infinite alternate;
+}
+
+.timestamp#highPriorityTimestamp {
+  color: #ff0000; /* Red */
+}
+
+.timestamp#mediumPriorityTimestamp {
+  color: #ffff00; /* Yellow */
+}
+
+.timestamp#lowPriorityTimestamp {
+  color: #00ff00; /* Green */
+}
+
+
+
+.glow {
+  color: #00ff00; /* Bright green */
+  text-shadow: 
+    0 0 5px #00ff00, 
+    0 0 10px #00ff00, 
+    0 0 20px #00ff00, 
+    0 0 40px #00ff00;
+  
+  animation: pulseGlowEffect 2.5s infinite alternate;
 }
 
 @keyframes blink {
@@ -289,4 +343,24 @@ onMounted(() => {
   50% { opacity: 0.3; }
   100% { opacity: 1; }
 }
+
+/* Animation for pulsating glow */
+@keyframes pulseGlowEffect {
+  from {
+    transform: scale(1);
+    text-shadow: 
+      0 0 5px currentColor, 
+      0 0 10px currentColor;
+    opacity: 1;
+  }
+  
+  to {
+    transform: scale(1.1);
+    text-shadow: 
+      0 0 20px currentColor, 
+      0 0 30px currentColor;
+    opacity: 0.8;
+  }
+}
+
 </style>

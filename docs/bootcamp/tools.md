@@ -787,7 +787,7 @@
   border-radius: 1rem;
   padding: 2rem;
   overflow: hidden;
-  perspective: 1000px;
+  perspective: 500px;
   transition: transform 0.1s ease;
   transform: perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1);
 }

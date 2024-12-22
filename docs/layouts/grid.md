@@ -1,6 +1,26 @@
 # Grid System
 
-<BackToAdmin />
+<div class="config-container">
+  <div class="cyber-grid"></div>
+  <div class="terminal-header">
+    <div class="terminal-controls">
+      <span class="control"></span>
+      <span class="control"></span>
+      <span class="control"></span>
+    </div>
+    <div class="terminal-title">DOOMSDAY_X_PRODUCTIONS v1.0</div>
+  </div>
+
+  <div class="terminal-window">
+    <!-- Terminal lines dynamically typed -->
+    <div class="line">Initializing configuration collection...</div>
+    <div class="line">Found 312 Bullet Configs...</div>
+    <div class="line">Found 267 BAS Configs...</div>
+    <div class="line">Found 281 BL Tools Configs...</div>
+    <div class="line success">System ready.</div>
+  </div>
+</div>
+
 
 <div class="threat-container">
   <div class="cyber-grid"></div>
@@ -46,6 +66,9 @@
 
 <script setup>
 import { onMounted, onUnmounted } from 'vue'
+
+
+
 
 // Map initialization and rendering
 onMounted(() => {
@@ -258,9 +281,188 @@ onMounted(() => {
     window.removeEventListener('resize', resize)
   })
 })
+
+
+
 </script>
 
 <style>
+.config-container {
+  background: #0a0a0a;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #00ff00;
+}
+
+.cyber-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: gridScroll 20s linear infinite;
+}
+
+@keyframes gridScroll {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
+}
+
+.terminal-header {
+  position: relative;
+  z-index: 1;
+  background: #1a1a1a;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f56;
+}
+
+.control:nth-child(2) { background: #ffbd2e; }
+.control:nth-child(3) { background: #27c93f; }
+
+.terminal-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-family: monospace;
+}
+
+.terminal-window {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  font-family: monospace;
+  color: #00ff00;
+}
+
+.line {
+  margin: 0.5rem 0;
+  opacity: 0;
+  animation: typeLine 0.5s ease forwards;
+}
+
+.line.success {
+  color: #27c93f;
+}
+
+
+
+@keyframes typeLine {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.module {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.module[data-type="web"] { border-color: #ff5f56; }
+.module[data-type="api"] { border-color: #ffbd2e; }
+.module[data-type="data"] { border-color: #27c93f; }
+
+.module:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.module-header {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.code-preview {
+  padding: 1rem;
+  background: #1a1a1a;
+}
+
+.code-preview pre {
+  margin: 0;
+  font-family: monospace;
+}
+
+.config-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+:deep(.feature-box) {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  transition: all 0.3s ease;
+}
+
+:deep(.feature-box:hover) {
+  transform: translateY(-4px);
+  border-color: var(--vp-c-brand);
+  box-shadow: 0 8px 16px rgba(0, 229, 255, 0.1);
+}
+
+:deep(.feature-title) {
+  background: linear-gradient(120deg, var(--vp-c-brand), var(--vp-c-brand-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+  
 .threat-container {
   position: relative;
   padding: 2rem;
@@ -431,3 +633,32 @@ onMounted(() => {
   100% { transform: translate(20px, 20px); }
 }
 </style>
+<script>
+ import { onMounted, onUnmounted } from 'vue'
+
+onMounted(() => {
+  // ... (previous code)
+
+  // Terminal animation
+  const terminalLines = [
+    "Initializing configuration collection...",
+    "Found 312 Bullet Configs...",
+    "Found 267 BAS Configs...",
+    "Found 281 BL Tools Configs...",
+    "<span class='success'>System ready.</span>"
+  ]
+  const terminalWindow = document.querySelector('.terminal-window')
+  let currentLineIndex = 0
+
+  function typeLine(line, callback) {
+    // ... (typeLine function implementation)
+  }
+
+  function typeAllLines() {
+    // ... (typeAllLines function implementation)
+  }
+
+  typeAllLines()
+})
+
+</script>
